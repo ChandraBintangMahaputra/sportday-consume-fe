@@ -1,0 +1,137 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding-bottom: 80px;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  color: #f5576c;
+  margin: 0;
+  font-weight: 700;
+}
+
+.logoutButton {
+  background: #f5576c;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.logoutButton:hover {
+  transform: scale(1.05);
+}
+
+.content {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+}
+
+.mainCard {
+  background: white;
+  border-radius: 20px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 300px;
+  width: 100%;
+}
+
+.mainCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.cardIcon {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.cardTitle {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.cardDescription {
+  color: #666;
+  font-size: 16px;
+}
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.navItem {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: #999;
+}
+
+.navItem:hover {
+  transform: scale(1.1);
+}
+
+.navItem.active {
+  color: #f5576c;
+}
+
+.navIcon {
+  font-size: 24px;
+}
+
+.navLabel {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .mainCard {
+    padding: 40px 30px;
+  }
+  
+  .cardIcon {
+    font-size: 60px;
+  }
+  
+  .cardTitle {
+    font-size: 24px;
+  }
+}

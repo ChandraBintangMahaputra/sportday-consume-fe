@@ -1,0 +1,205 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding-bottom: 80px;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: #f5576c;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.backButton:hover {
+  background: rgba(245, 87, 108, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  color: #f5576c;
+  margin: 0;
+  font-weight: 700;
+}
+
+.markAllButton {
+  background: none;
+  border: none;
+  color: #f5576c;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.markAllButton:hover {
+  background: rgba(245, 87, 108, 0.1);
+}
+
+.content {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.emptyState {
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.emptyIcon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.emptyTitle {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.emptyText {
+  font-size: 14px;
+  color: #999;
+}
+
+.notificationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notificationCard {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.notificationCard:hover {
+  transform: translateX(5px);
+}
+
+.notificationCard.unread {
+  background: linear-gradient(to right, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1));
+  border-left: 4px solid #f5576c;
+}
+
+.unreadBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background: #f5576c;
+  border-radius: 50%;
+}
+
+.notificationIcon {
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.notificationContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.notificationTitle {
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+}
+
+.notificationMessage {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.notificationTime {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.navItem {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: #999;
+}
+
+.navItem:hover {
+  transform: scale(1.1);
+}
+
+.navItem.active {
+  color: #f5576c;
+}
+
+.navIcon {
+  font-size: 24px;
+}
+
+.navLabel {
+  font-size: 12px;
+  font-weight: 600;
+}

@@ -1,0 +1,262 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding-bottom: 80px;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: #f5576c;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.backButton:hover {
+  background: rgba(245, 87, 108, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  color: #f5576c;
+  margin: 0;
+  font-weight: 700;
+}
+
+.content {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.coinCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.coinCard {
+  background: white;
+  border-radius: 15px;
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.coinIcon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.coinLabel {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.coinValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f5576c;
+}
+
+.scanSection {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.scanButton {
+  width: 100%;
+  background: white;
+  border: none;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f5576c;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.scanButton:hover {
+  transform: translateY(-2px);
+}
+
+.scanIcon {
+  font-size: 28px;
+}
+
+.scannerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.scannerBox {
+  width: 250px;
+  height: 250px;
+  border: 3px solid #f5576c;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.scannerLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #f5576c;
+  animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.historySection {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.historyTitle {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.historyItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.historyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.historyName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.historyDate {
+  font-size: 12px;
+  color: #999;
+}
+
+.historyAmount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f5576c;
+}
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.navItem {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: #999;
+}
+
+.navItem:hover {
+  transform: scale(1.1);
+}
+
+.navIcon {
+  font-size: 24px;
+}
+
+.navLabel {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .coinCards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .coinCard {
+    padding: 15px 5px;
+  }
+  
+  .coinIcon {
+    font-size: 24px;
+  }
+  
+  .coinValue {
+    font-size: 16px;
+  }
+}
